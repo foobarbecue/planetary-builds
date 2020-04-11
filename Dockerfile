@@ -18,6 +18,7 @@ COPY isis_environment.yml /
 RUN conda env create -n isis3 -f /isis_environment.yml
 RUN echo "source activate isis3" > ~/.bashrc
 RUN git clone --recurse-submodules https://github.com/foobarbecue/ISIS3.git
+RUN cd /ISIS3 && git checkout 989134b28fca90b78a457dd0b73470d996d92997
 RUN cd ISIS3 && mkdir build install
 ENV ISISROOT /ISIS3/build
 RUN cd /ISIS3/build && source activate isis3 && cmake DJP2KFLAG=OFF -DCMAKE_BUILD_TYPE=RELEASE -GNinja ../isis
@@ -25,6 +26,7 @@ RUN cd /ISIS3/build && source activate isis3 && ninja install
 
 #ASP
 RUN git clone https://github.com/NeoGeographyToolkit/StereoPipeline
+RUN cd StereoPipeline && checkout d111e48338e448377163eb33504d556f2cb4967a
 RUN mkdir /projects && cd /projects && git clone https://github.com/NeoGeographyToolkit/BinaryBuilder.git
 RUN cd /projects/BinaryBuilder
 
