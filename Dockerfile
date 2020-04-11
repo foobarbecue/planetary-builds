@@ -31,5 +31,5 @@ RUN rm /usr/bin/gcc /usr/bin/g++ && ln -s /usr/bin/gcc-5 /usr/bin/gcc && ln -s /
 RUN git clone https://github.com/NeoGeographyToolkit/StereoPipeline
 RUN cd StereoPipeline && git checkout v2.6.2
 RUN mkdir /projects && cd /projects && git clone https://github.com/NeoGeographyToolkit/BinaryBuilder.git
-RUN cd /projects/BinaryBuilder && source activate isis3 && source ./auto_build/utils.sh && ./build.py
+RUN cd /projects/BinaryBuilder && source activate isis3 && ./build.py
 
