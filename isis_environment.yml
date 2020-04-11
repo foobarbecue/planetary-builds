@@ -19,6 +19,7 @@ dependencies:
   - embree
   - geos>=3.7,<3.8
   - geotiff
+  - glog
   - gmm
   - gmp
   - gsl
@@ -59,4 +60,5 @@ dependencies:
   - xorg-libsm
   - xorg-libx11
   - xorg-libxi
+  - defaults::xz             # conda-forge version of liblzma.la is missing which ASP libtool looks for
   - zlib
