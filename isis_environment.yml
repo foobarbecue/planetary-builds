@@ -21,7 +21,7 @@ dependencies:
   - flann
   - geos>=3.7,<3.8
   - geotiff
-  - glog
+  - conda-forge::glog==0.3.4
   - gmm
   - gmp
   - gsl
