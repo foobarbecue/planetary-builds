@@ -18,6 +18,7 @@ dependencies:
   - doxygen
   - eigen
   - embree
+  - flann
   - geos>=3.7,<3.8
   - geotiff
   - glog
